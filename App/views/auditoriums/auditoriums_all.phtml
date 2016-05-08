@@ -1,0 +1,27 @@
+<div>
+    <div>
+        <p>Main Menu</p>
+        <ul>
+            <li><a href="/">Back</a></li>
+        </ul>
+
+        <div>
+            <table border="1">
+                <tr>
+                    <td>id</td>
+                    <td>Name</td>
+                    <td>Number of Seats</td>
+                    <td>Vip seats</td>
+                </tr>
+                <?php foreach ($auditoriums as $auditorium): ?>
+                    <tr>
+                        <td><?php echo $auditorium->getId(); ?></td>
+                        <td><?php echo $auditorium->getName(); ?></td>
+                        <td><?php echo $auditorium->getSeatsNumber(); ?></td>
+                        <td><?php echo $auditorium->getVipSeats(); ?></td>
+                    </tr>
+                <?php endforeach; ?>
+            </table>
+        </div>
+    </div>
+</div>

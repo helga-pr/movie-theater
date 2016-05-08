@@ -1,0 +1,37 @@
+<div>
+    <div>
+        <p>Main Menu</p>
+        <ul>
+            <li><a href="/">Back</a></li>
+        </ul>
+
+        <div>
+            <form method="post">
+                <label for="id">Enter ID</label>
+                <input type="text" name="id"/>
+                <input type="submit"/>
+            </form>
+        </div>
+
+        <br />
+
+        <?php if (count($data)): ?>
+            <table border="1">
+                <tr>
+                    <td>id</td>
+                    <td>First Name</td>
+                    <td>Last Name</td>
+                    <td>Email</td>
+                    <td>Birthday</td>
+                </tr>
+                <tr>
+                    <td><?php echo $user->getId(); ?></td>
+                    <td><?php echo $user->getFirstName(); ?></td>
+                    <td><?php echo $user->getLastName(); ?></td>
+                    <td><?php echo $user->getEmail(); ?></td>
+                    <td><?php echo $user->getBirthday(); ?></td>
+                </tr>
+            </table>
+        <?php endif; ?>
+    </div>
+</div>

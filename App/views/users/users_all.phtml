@@ -1,0 +1,35 @@
+<div>
+    <div>
+        <p>Main Menu</p>
+        <ul>
+            <li><a href="/">Back</a></li>
+        </ul>
+
+        <div>
+            <table border="1">
+                <tr>
+                    <td>id</td>
+                    <td>First Name</td>
+                    <td>Last Name</td>
+                    <td>Email</td>
+                    <td>Birthday</td>
+                </tr>
+                <?php foreach ($users as $user): ?>
+                    <tr>
+                        <td><?php echo $user->getId(); ?></td>
+                        <td><?php echo $user->getFirstName(); ?></td>
+                        <td><?php echo $user->getLastName(); ?></td>
+                        <td><?php echo $user->getEmail(); ?></td>
+                        <td><?php echo $user->getBirthday(); ?></td>
+                        <td>
+                            <form method="post" action="/users/delete">
+                                <input type="hidden" name="id" value="<?php echo $user->getId(); ?>"/>
+                                <button>Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+            </table>
+        </div>
+    </div>
+</div>
