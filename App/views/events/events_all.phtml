@@ -1,0 +1,33 @@
+<div>
+    <div>
+        <p>Manage events</p>
+        <ul>
+            <li><a href=<?php echo HOST. '/events';?>>Back</a></li>
+        </ul>
+
+        <div>
+            <table border="1">
+                <tr>
+                    <td>id</td>
+                    <td>Event Name</td>
+                    <td>Base price</td>
+                    <td>Rating</td>
+                </tr>
+                <?php foreach ($events as $event): ?>
+                    <tr>
+                        <td><?php echo $event->getId(); ?></td>
+                        <td><?php echo $event->getName(); ?></td>
+                        <td><?php echo $event->getBasePrice(); ?></td>
+                        <td><?php echo $event->getRating(); ?></td>
+                        <td>
+                            <form method="post" action="/events/delete">
+                                <input type="hidden" name="id" value="<?php echo $event->getId(); ?>"/>
+                                <button>Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+            </table>
+        </div>
+    </div>
+</div>

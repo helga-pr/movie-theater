@@ -1,0 +1,34 @@
+<div>
+    <div>
+        <p>Manage events</p>
+        <ul>
+            <li><a href=<?php echo HOST. '/events';?>>Back</a></li>
+        </ul>
+
+        <div>
+            <form method="post">
+                <table>
+                    <tr>
+                        <td><label for="event_name">Event name</label></td>
+                        <td><input type="text" name="event_name"/></td>
+                    </tr>
+                    <tr>
+                        <td><label for="base_price">Base price</label></td>
+                        <td><input type="text" name="base_price"/></td>
+                    </tr>
+                    <tr>
+                        <td><label for="rating">Rating</label></td>
+                        <td>
+                            <input type="radio" name="rating" value="low" />low
+                            <br/>
+                            <input type="radio" name="rating" value="middle" checked="true"/>middle
+                            <br/>
+                            <input type="radio" name="rating" value="high"/>high
+                        </td>
+                    </tr>
+                </table>
+                <input type="submit" value="Add event"/>
+            </form>
+        </div>
+    </div>
+</div>

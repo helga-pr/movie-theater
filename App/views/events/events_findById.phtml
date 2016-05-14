@@ -1,0 +1,35 @@
+<div>
+    <div>
+        <p>Manage events</p>
+        <ul>
+            <li><a href=<?php echo HOST. '/events';?>>Back</a></li>
+        </ul>
+
+        <div>
+            <form method="post">
+                <label for="id">Enter ID</label>
+                <input type="text" name="id"/>
+                <input type="submit"/>
+            </form>
+        </div>
+
+        <br />
+
+        <?php if (count($data)): ?>
+            <table border="1">
+                <tr>
+                    <td>id</td>
+                    <td>Event Name</td>
+                    <td>Base price</td>
+                    <td>Rating</td>
+                </tr>
+                <tr>
+                    <td><?php echo $event->getId(); ?></td>
+                    <td><?php echo $event->getName(); ?></td>
+                    <td><?php echo $event->getBasePrice(); ?></td>
+                    <td><?php echo $event->getRating(); ?></td>
+                </tr>
+            </table>
+        <?php endif; ?>
+    </div>
+</div>
