@@ -64,7 +64,7 @@ class UserRepository extends Model implements UserRepositoryInterface
      */
     public function getAll()
     {
-        $dbQuery = $this->db->prepare('SELECT * FROM `' . $this->tableName. '` LIMIT 1');
+        $dbQuery = $this->db->prepare('SELECT * FROM `' . $this->tableName. '`');
         $dbQuery->execute();
         $result = $dbQuery->fetchAll(\PDO::FETCH_OBJ);
         $users = [];

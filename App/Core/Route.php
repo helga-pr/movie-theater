@@ -22,20 +22,23 @@ class Route
         $controllerName = 'Index';
         $actionName = 'index';
 
+//explode - ф-ция, которая разбивает строку на подстроки в соответствии с указанным разделителем (первый  параметр)
         $parts = explode("?", $_SERVER['REQUEST_URI']);
+
         $routes = explode('/', $parts[0]);
 
-        // получаем имя контроллера
-        if (!empty($routes[1])) {
-            $controllerName = $routes[1];
+         // получаем имя контроллера
+        if (!empty($routes[2])) {
+            $controllerName = $routes[2];
+
         }
 
         // получаем имя экшена
-        if (!empty($routes[2])) {
-            $actionName = $routes[2];
+        if (!empty($routes[3])) {
+            $actionName = $routes[3];
         }
 
-        $controllerFullName = '\\App\\Controller\\' . ucfirst($controllerName);
+        $controllerFullName = '\\App\\Controller\\' . ucfirst($controllerName);//переводит первый символ строки в верхний регистр
 
         // создаем контроллер
         $controller = new $controllerFullName;

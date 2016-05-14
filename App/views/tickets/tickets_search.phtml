@@ -1,0 +1,39 @@
+<div>
+    <div>
+        <p>Booking management</p>
+        <ul>
+            <li><a href=<?php echo HOST . '/tickets'; ?>>Back</a></li>
+        </ul>
+
+        <div>
+            <form method="post">
+                <label for="event_name">Enter event name</label>
+                <input type="text" name="event_name"/>
+                <input type="submit"/>
+            </form>
+        </div>
+
+        <br />
+
+        <?php if (count($data)): ?>
+            <div>
+                <table border="1">
+                    <tr>
+                        <td>id</td>
+                        <td>user id</td>
+                        <td> event id</td>
+                        <td> date time</td>
+                        <td>Vip seat</td>
+                    </tr>
+                    <tr>
+                        <td><?php echo $ticket->getId(); ?></td>
+                        <td><?php echo $ticket->getUser_id(); ?></td>
+                        <td><?php echo $ticket->getEvent_id(); ?></td>
+                        <td><?php echo $ticket->getDateTime(); ?></td>
+                        <td><?php echo $ticket->getSeat(); ?></td>
+                    </tr>
+                </table>
+            </div>
+        <?php endif; ?>
+    </div>
+</div>

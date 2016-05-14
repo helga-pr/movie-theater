@@ -25,7 +25,7 @@ CREATE TABLE `auditoriums` (
 ) ENGINE=InnoDB DEFAULT CHARSET=cp1251;
 
 INSERT INTO `auditoriums` (`id`, `name`, `seats_number`, `vip_seats`) VALUES
-(1,	'Cinema',	100,	'10,20,30'),
+(1,	'Cinema',	100,	'10,20,30');
 
 DROP TABLE IF EXISTS `counters`;
 CREATE TABLE `counters` (

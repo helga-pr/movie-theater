@@ -11,6 +11,10 @@ interface EventInterface
     const NAME = 'name';
     const BASE_PRICE = 'base_price';
     const RATING = 'rating';
+
+    const LOW = 'low';
+    const MIDDLE = 'mid';
+    const HIGH = 'high';
     /**#@-*/
 
     /**
@@ -47,24 +51,14 @@ interface EventInterface
     public function getBasePrice();
 
     /**
-     * @param string $email
+     * @param enum $rating
      * @return $this
      */
-    public function setEmail($email);
+    public function setRating($rating);
 
     /**
-     * @return string
+     * @return enum
      */
-    public function getEmail();
+    public function getRating();
 
-    /**
-     * @param \DateTime $birthday
-     * @return $this
-     */
-    public function setBirthday($birthday);
-
-    /**
-     * @return \DateTime
-     */
-    public function getBirthday();
 }

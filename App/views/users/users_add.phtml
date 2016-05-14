@@ -2,7 +2,7 @@
     <div>
         <p>Main Menu</p>
         <ul>
-            <li><a href="/">Back</a></li>
+            <li><a href=<?php echo HOST. '/users';?>>Back</a></li>
         </ul>
 
         <div>
@@ -21,11 +21,11 @@
                         <td><input type="text" name="email"/></td>
                     </tr>
                     <tr>
-                        <td><label for="birthday">Birthday</label></td>
+                        <td><label for="birthday">Birthday (yyyy-mm-dd)</label></td>
                         <td><input type="text" name="birthday"/></td>
                     </tr>
                 </table>
-                <input type="submit"/>
+                <input type="submit" value="Добавить пользователя" />
             </form>
         </div>
     </div>
