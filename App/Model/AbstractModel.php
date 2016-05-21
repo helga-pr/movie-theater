@@ -8,6 +8,10 @@
 
 namespace App\Model;
 
+/**
+ * Class AbstractModel
+ * @package App\Model
+ */
 class AbstractModel
 {
     /**
@@ -17,6 +21,11 @@ class AbstractModel
      */
     protected $_data = [];
 
+    /**
+     * @param $key
+     * @param null $value
+     * @return $this
+     */
     public function setData($key, $value = null)
     {
         if ($key === (array)$key) {

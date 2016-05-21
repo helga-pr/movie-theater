@@ -10,6 +10,9 @@ use App\Model\TicketRepository;
  */
 class Tickets extends FrontController
 {
+    /**
+     * @var TicketRepository
+     */
     private $repository;
 
     /**
@@ -40,6 +43,9 @@ class Tickets extends FrontController
         $this->view->generate('tickets/tickets_all', 'template_index', $data);
     }
 
+    /**
+     * searchAction
+     */
     public function searchAction()
     {
         $data = [];

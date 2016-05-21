@@ -10,6 +10,9 @@ use App\Model\UserRepository;
  */
 class Users extends FrontController
 {
+    /**
+     * @var UserRepository
+     */
     private $repository;
 
     /**
@@ -30,7 +33,7 @@ class Users extends FrontController
     }
 
     /**
-     * indexAction
+     * addAction
      */
     function addAction()
     {
@@ -64,6 +67,9 @@ class Users extends FrontController
         $this->view->generate('users/users_all', 'template_index', $data);
     }
 
+    /**
+     * findByIdAction
+     */
     public function findByIdAction()
     {
         $data = [];
@@ -79,6 +85,9 @@ class Users extends FrontController
         $this->view->generate('users/users_findById', 'template_index', $data);
     }
 
+    /**
+     * findByEmailAction
+     */
     public function findByEmailAction()
     {
         $data = [];
@@ -94,6 +103,9 @@ class Users extends FrontController
         $this->view->generate('users/users_findByEmail', 'template_index', $data);
     }
 
+    /**
+     *
+     */
     public function deleteAction()
     {
         if (!isset($_POST['id']) && empty($_POST['id'])) {

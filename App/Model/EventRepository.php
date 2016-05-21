@@ -6,6 +6,10 @@ use App\Api\Data\EventInterface;
 use App\Api\EventRepositoryInterface;
 use App\Core\Model;
 
+/**
+ * Class EventRepository
+ * @package App\Model
+ */
 class EventRepository extends Model implements EventRepositoryInterface
 {
     /**
@@ -14,7 +18,9 @@ class EventRepository extends Model implements EventRepositoryInterface
     private $tableName = 'event';
 
     /**
-     * @inheritdoc
+     * inheritdoc
+     * @param Event $event
+     * @return mixed
      */
     public function save(Event $event)
     {
@@ -33,7 +39,8 @@ class EventRepository extends Model implements EventRepositoryInterface
     }
 
     /**
-     * @inheritdoc
+     * @param int $id
+     * @return mixed
      */
     public function remove($id)
     {
@@ -43,6 +50,8 @@ class EventRepository extends Model implements EventRepositoryInterface
 
     /**
      * @inheritdoc
+     * @param int $id
+     * @return Event
      */
     public function getById($id)
     {
@@ -60,6 +69,7 @@ class EventRepository extends Model implements EventRepositoryInterface
 
     /**
      * @inheritdoc
+     * @return mixed
      */
     public function getAll()
     {
@@ -80,6 +90,10 @@ class EventRepository extends Model implements EventRepositoryInterface
     }
 
 
+    /**
+     * @param $name
+     * @return Event
+     */
     public function getByName($name)
     {
         $dbQuery = $this->db->prepare('SELECT * FROM ' . $this->tableName . ' WHERE `name` = ? LIMIT 1');

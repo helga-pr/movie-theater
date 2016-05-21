@@ -11,21 +11,24 @@ namespace App\Model;
 use App\Api\Data;
 
 
-
-
+/**
+ * Class Event
+ * @package App\Model
+ */
 class Event extends AbstractModel implements Data\EventInterface
 {
     /**
-     * @inheritdoc
+     * @param int $id
+     * @return $this
      */
     public function setId($id)
     {
-        if($id != NULL && $id > 0)
+        if($id != null && $id > 0)
         return $this->setData(Data\EventInterface::ID, $id);
     }
 
     /**
-     * @inheritdoc
+     * @return int
      */
     public function getId()
     {
@@ -34,12 +37,12 @@ class Event extends AbstractModel implements Data\EventInterface
 
    
     /**
-     * @param string $firstName
+     * @param string $name
      * @return $this
      */
     public function setName($name)
     {
-        if($name != NULL)
+        if($name != null)
             return $this->setData(Data\EventInterface::NAME, $name);
 
     }
@@ -54,18 +57,18 @@ class Event extends AbstractModel implements Data\EventInterface
     }
 
     /**
-     * @param string $lastName
+     * @param double $basePrice
      * @return $this
      */
     public function setBasePrice($basePrice)
     {
-        if($basePrice != NULL && $basePrice > 0)
+        if($basePrice != null && $basePrice > 0)
             return $this->setData(Data\EventInterface::BASE_PRICE, $basePrice);
 
     }
 
     /**
-     * @return string
+     * @return double
      */
     public function getBasePrice()
     {
@@ -78,13 +81,13 @@ class Event extends AbstractModel implements Data\EventInterface
      */
     public function setRating($rating)
     {
-        if($rating != NULL)
+        if($rating != null)
             return $this->setData(Data\EventInterface::RATING, $rating);
 
     }
 
     /**
-     * @return
+     *  @return string
      */
     public function getRating()
     {

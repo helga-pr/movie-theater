@@ -52,7 +52,7 @@ interface TicketInterface
 
     /**
      * @param $datetime
-     * @return mixed
+     * @return $this
      */
     public function setDatetime($datetime);
 

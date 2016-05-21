@@ -12,40 +12,65 @@ use App\Api\Data;
 use App\Api\Data\TicketInterface;
 use DateTime;
 
+/**
+ * Class Ticket
+ * @package App\Model
+ */
 class Ticket extends AbstractModel implements Data\TicketInterface
 {
+    /**
+     * @param int $id
+     * @return $this
+     */
     public function setId($id)
     {
         return $this->setData(Data\TicketInterface::ID, $id);
     }
 
+    /**
+     * @return int
+     */
     public function getId()
     {
         return $this->getData(Data\TicketInterface::ID);
     }
 
+    /**
+     * @param int $user_id
+     * @return $this
+     */
     public function setUser_id($user_id)
     {
         return $this->setData(Data\TicketInterface::USER_ID, $user_id);
     }
 
+    /**
+     * @return int
+     */
     public function getUser_id()
     {
         return $this->getData(Data\TicketInterface::USER_ID);
     }
 
+    /**
+     * @param int $event_id
+     * @return $this
+     */
     public function setEvent_id($event_id)
     {
         return $this->setData(Data\TicketInterface::EVENT_ID, $event_id);
     }
 
+    /**
+     * @return int
+     */
     public function getEvent_id()
     {
         return $this->getData(Data\TicketInterface::EVENT_ID);
     }
 
      /**
-     * @param int $user_id
+     * @param DateTime $datetime
      * @return $this
      */
     public function setDatetime($datetime)

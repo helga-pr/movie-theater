@@ -10,10 +10,20 @@ use App\Api\User;
 use App\Core\Model;
 use App\Api\Data\TicketInterface;
 
+/**
+ * Class TicketRepository
+ * @package App\Model
+ */
 class TicketRepository extends Model implements BookingManagementInterface
 {
+    /**
+     * @var string
+     */
     private $tableName = 'ticket';
 
+    /**
+     * TicketRepository constructor.
+     */
     public function __construct()
     {
         parent::__construct();
@@ -21,6 +31,8 @@ class TicketRepository extends Model implements BookingManagementInterface
 
     /**
      * @inheritdoc
+     * @param Ticket $ticket
+     * @return mixed
      */
     public function save(Ticket $ticket)
     {
@@ -40,6 +52,8 @@ class TicketRepository extends Model implements BookingManagementInterface
 
     /**
      * @inheritdoc
+     * @param int $id
+     * @return mixed
      */
     public function remove($id)
     {
@@ -70,6 +84,10 @@ class TicketRepository extends Model implements BookingManagementInterface
         return $tickets;
     }
 
+    /**
+     * @param $event_name
+     * @return Ticket[]
+     */
     public function getByEvent($event_name)
     {
         $event = new Event();
@@ -93,6 +111,10 @@ class TicketRepository extends Model implements BookingManagementInterface
         return $tickets;
     }
 
+    /**
+     * @param $user_id
+     * @return Ticket[]
+     */
     public function getByUser_id($user_id)
     {
 
@@ -114,16 +136,30 @@ class TicketRepository extends Model implements BookingManagementInterface
     }
 
 
+    /**
+     * @param Event $event
+     * @param LocalDateTime $dateTime
+     * @param User $user
+     * @param string $seats
+     * @return double
+     */
     public function getTicketsPrice(Event $event, LocalDateTime $dateTime, User $user, $seats)
     {
         // TODO: Implement getTicketsPrice() method.
     }
 
+    /**
+     * @param Ticket[] $tickets
+     */
     public function bookTickets($tickets)
     {
         // TODO: Implement bookTickets() method.
     }
 
+    /**
+     * @param Event $event
+     * @param LocalDateTime $dateTime
+     */
     public function getPurchasedTicketsForEvent(Event $event, LocalDateTime $dateTime)
     {
         // TODO: Implement getPurchasedTicketsForEvent() method.

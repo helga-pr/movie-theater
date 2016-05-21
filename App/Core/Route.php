@@ -22,7 +22,7 @@ class Route
         $controllerName = 'Index';
         $actionName = 'index';
 
-//explode - ф-ция, которая разбивает строку на подстроки в соответствии с указанным разделителем (первый  параметр)
+        //explode - ф-ция, которая разбивает строку на подстроки в соответствии с указанным разделителем (первый  параметр)
         $parts = explode("?", $_SERVER['REQUEST_URI']);
 
         $routes = explode('/', $parts[0]);

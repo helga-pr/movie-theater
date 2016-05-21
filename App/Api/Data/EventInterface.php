@@ -29,10 +29,10 @@ interface EventInterface
     public function getId();
 
     /**
-     * @param string $firstName
+     * @param string $Name
      * @return $this
      */
-    public function setName($firstName);
+    public function setName($Name);
 
     /**
      * @return string
@@ -40,24 +40,24 @@ interface EventInterface
     public function getName();
 
     /**
-     * @param string $lastName
+     * @param double $basePrice
      * @return $this
      */
     public function setBasePrice($basePrice);
 
     /**
-     * @return string
+     * @return double
      */
     public function getBasePrice();
 
     /**
-     * @param enum $rating
+     * @param string $rating
      * @return $this
      */
     public function setRating($rating);
 
     /**
-     * @return enum
+     * @return string
      */
     public function getRating();
 

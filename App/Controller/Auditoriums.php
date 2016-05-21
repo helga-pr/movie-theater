@@ -10,6 +10,9 @@ use App\Model\AuditoriumRepository;
  */
 class Auditoriums extends FrontController
 {
+    /**
+     * @var AuditoriumRepository
+     */
     private $repository;
 
     /**
@@ -40,6 +43,9 @@ class Auditoriums extends FrontController
         $this->view->generate('auditoriums/auditoriums_all', 'template_index', $data);
     }
 
+    /**
+     * searchAction
+     */
     public function searchAction()
     {
         $data = [];

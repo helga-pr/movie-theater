@@ -10,6 +10,9 @@ use App\Model\EventRepository;
  */
 class Events extends FrontController
 {
+    /**
+     * @var EventRepository
+     */
     private $repository;
 
     /**
@@ -30,7 +33,7 @@ class Events extends FrontController
     }
 
     /**
-     * indexAction
+     * addAction
      */
     function addAction()
     {
@@ -64,6 +67,9 @@ class Events extends FrontController
         $this->view->generate('events/events_all', 'template_index', $data);
     }
 
+    /**
+     * findByIdAction
+     */
     public function findByIdAction()
     {
         $data = [];
@@ -79,6 +85,9 @@ class Events extends FrontController
         $this->view->generate('events/events_findById', 'template_index', $data);
     }
 
+    /**
+     * findByNameAction
+     */
     public function findByNameAction()
     {
         $data = [];
@@ -94,6 +103,9 @@ class Events extends FrontController
         $this->view->generate('events/events_findByName', 'template_index', $data);
     }
 
+    /**
+     * deleteAction
+     */
     public function deleteAction()
     {
         if (!isset($_POST['id']) && empty($_POST['id'])) {

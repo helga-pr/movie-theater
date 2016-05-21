@@ -10,10 +10,16 @@ namespace App\Model;
 
 use App\Api\Data;
 
+/**
+ * Class User
+ * @package App\Model
+ */
 class User extends AbstractModel implements Data\UserInterface
 {
     /**
      * @inheritdoc
+     * @param int $id
+     * @return $this
      */
     public function setId($id)
     {
@@ -22,6 +28,7 @@ class User extends AbstractModel implements Data\UserInterface
 
     /**
      * @inheritdoc
+     * @return int
      */
     public function getId()
     {
@@ -30,6 +37,8 @@ class User extends AbstractModel implements Data\UserInterface
 
     /**
      * @inheritdoc
+     * @param string $firstname
+     * @return mixed
      */
     public function setFirstName($firstName)
     {
@@ -38,6 +47,7 @@ class User extends AbstractModel implements Data\UserInterface
 
     /**
      * @inheritdoc
+     * @return string
      */
     public function getFirstName()
     {

@@ -6,10 +6,20 @@ use App\Api\AuditoriumRepositoryInterface;
 use App\Core\Model;
 use App\Api\Data\AuditoriumInterface;
 
+/**
+ * Class AuditoriumRepository
+ * @package App\Model
+ */
 class AuditoriumRepository extends Model implements AuditoriumRepositoryInterface
 {
+    /**
+     * @var string
+     */
     private $tableName = 'auditoriums';
 
+    /**
+     * AuditoriumRepository constructor.
+     */
     public function __construct()
     {
         parent::__construct();
@@ -36,6 +46,10 @@ class AuditoriumRepository extends Model implements AuditoriumRepositoryInterfac
         return $auditoriums;
     }
 
+    /**
+     * @param $name
+     * @return Auditorium
+     */
     public function getByName($name)
     {
         $dbQuery = $this->db->prepare('SELECT * FROM `' . $this->tableName . '` WHERE `name` = ?');

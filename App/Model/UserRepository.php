@@ -6,6 +6,10 @@ use App\Api\Data\UserInterface;
 use App\Api\UserRepositoryInterface;
 use App\Core\Model;
 
+/**
+ * Class UserRepository
+ * @package App\Model
+ */
 class UserRepository extends Model implements UserRepositoryInterface
 {
     /**
@@ -15,6 +19,8 @@ class UserRepository extends Model implements UserRepositoryInterface
 
     /**
      * @inheritdoc
+     * @param User $user
+     * @return mixed
      */
     public function save(User $user)
     {
@@ -34,6 +40,8 @@ class UserRepository extends Model implements UserRepositoryInterface
 
     /**
      * @inheritdoc
+     * @param int $id
+     * @return mixed
      */
     public function remove($id)
     {
@@ -43,6 +51,8 @@ class UserRepository extends Model implements UserRepositoryInterface
 
     /**
      * @inheritdoc
+     * @param int $id
+     * @return User
      */
     public function getById($id)
     {
@@ -61,6 +71,7 @@ class UserRepository extends Model implements UserRepositoryInterface
 
     /**
      * @inheritdoc
+     * @return User[]
      */
     public function getAll()
     {
@@ -83,6 +94,8 @@ class UserRepository extends Model implements UserRepositoryInterface
 
     /**
      * @inheritdoc
+     * @param string $email
+     * @return User
      */
     public function getByEmail($email)
     {
