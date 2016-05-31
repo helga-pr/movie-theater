@@ -11,7 +11,6 @@ interface EventInterface
     const NAME = 'name';
     const BASE_PRICE = 'base_price';
     const RATING = 'rating';
-
     const LOW = 'low';
     const MIDDLE = 'mid';
     const HIGH = 'high';

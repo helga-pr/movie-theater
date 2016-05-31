@@ -33,7 +33,6 @@ class EventRepository extends Model implements EventRepositoryInterface
                 $event->getName(),
                 $event->getBasePrice(),
                 $event->getRating(),
-
             ]
         );
     }

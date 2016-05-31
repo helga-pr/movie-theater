@@ -5,6 +5,10 @@ namespace Lib;
 /**
  * Class Registry
  */
+/**
+ * Class Registry
+ * @package Lib
+ */
 class Registry
 {
     /**

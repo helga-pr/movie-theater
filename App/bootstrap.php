@@ -1,5 +1,5 @@
 <?php
-
+use App\Core\Route;
 require_once 'configs/connect.php';
 
-App\Core\Route::start(); // запускаем маршрутизатор
+Route::start(); // запускаем маршрутизатор

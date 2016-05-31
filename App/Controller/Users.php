@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Core\FrontController;
+use App\Model\User;
 use App\Model\UserRepository;
 
 /**
@@ -37,7 +38,7 @@ class Users extends FrontController
      */
     function addAction()
     {
-        $user = new \App\Model\User();
+        $user = new User();
         if (!empty($_POST)) {
             $user->setData($_POST);
             try {

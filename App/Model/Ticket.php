@@ -16,7 +16,7 @@ use DateTime;
  * Class Ticket
  * @package App\Model
  */
-class Ticket extends AbstractModel implements Data\TicketInterface
+class Ticket extends AbstractModel implements TicketInterface
 {
     /**
      * @param int $id
@@ -24,7 +24,7 @@ class Ticket extends AbstractModel implements Data\TicketInterface
      */
     public function setId($id)
     {
-        return $this->setData(Data\TicketInterface::ID, $id);
+        return $this->setData(TicketInterface::ID, $id);
     }
 
     /**
@@ -32,7 +32,7 @@ class Ticket extends AbstractModel implements Data\TicketInterface
      */
     public function getId()
     {
-        return $this->getData(Data\TicketInterface::ID);
+        return $this->getData(TicketInterface::ID);
     }
 
     /**
@@ -41,7 +41,7 @@ class Ticket extends AbstractModel implements Data\TicketInterface
      */
     public function setUser_id($user_id)
     {
-        return $this->setData(Data\TicketInterface::USER_ID, $user_id);
+        return $this->setData(TicketInterface::USER_ID, $user_id);
     }
 
     /**
@@ -49,7 +49,7 @@ class Ticket extends AbstractModel implements Data\TicketInterface
      */
     public function getUser_id()
     {
-        return $this->getData(Data\TicketInterface::USER_ID);
+        return $this->getData(TicketInterface::USER_ID);
     }
 
     /**
@@ -58,7 +58,7 @@ class Ticket extends AbstractModel implements Data\TicketInterface
      */
     public function setEvent_id($event_id)
     {
-        return $this->setData(Data\TicketInterface::EVENT_ID, $event_id);
+        return $this->setData(TicketInterface::EVENT_ID, $event_id);
     }
 
     /**
@@ -66,7 +66,7 @@ class Ticket extends AbstractModel implements Data\TicketInterface
      */
     public function getEvent_id()
     {
-        return $this->getData(Data\TicketInterface::EVENT_ID);
+        return $this->getData(TicketInterface::EVENT_ID);
     }
 
      /**
@@ -75,7 +75,7 @@ class Ticket extends AbstractModel implements Data\TicketInterface
      */
     public function setDatetime($datetime)
     {
-        return $this->setData(Data\TicketInterface::DATETIME, $datetime);
+        return $this->setData(TicketInterface::DATETIME, $datetime);
     }
 
 
@@ -84,7 +84,7 @@ class Ticket extends AbstractModel implements Data\TicketInterface
      */
     public function getDatetime()
     {
-        return $this->getData(Data\TicketInterface::DATETIME);
+        return $this->getData(TicketInterface::DATETIME);
     }
 
     /**
@@ -93,7 +93,7 @@ class Ticket extends AbstractModel implements Data\TicketInterface
      */
     public function setSeat($seat)
     {
-        return $this->setData(Data\TicketInterface::SEAT, $seat);
+        return $this->setData(TicketInterface::SEAT, $seat);
     }
 
     /**
@@ -101,6 +101,6 @@ class Ticket extends AbstractModel implements Data\TicketInterface
      */
     public function getSeat()
     {
-        return $this->getData(Data\TicketInterface::SEAT);
+        return $this->getData(TicketInterface::SEAT);
     }
 }

@@ -9,13 +9,12 @@
 namespace App\Model;
 
 use App\Api\Data;
-
-
+use App\Api\Data\EventInterface;
 /**
  * Class Event
  * @package App\Model
  */
-class Event extends AbstractModel implements Data\EventInterface
+class Event extends AbstractModel implements EventInterface
 {
     /**
      * @param int $id
@@ -24,7 +23,7 @@ class Event extends AbstractModel implements Data\EventInterface
     public function setId($id)
     {
         if($id != null && $id > 0)
-        return $this->setData(Data\EventInterface::ID, $id);
+        return $this->setData(EventInterface::ID, $id);
     }
 
     /**
@@ -32,9 +31,8 @@ class Event extends AbstractModel implements Data\EventInterface
      */
     public function getId()
     {
-        return $this->getData(Data\EventInterface::ID);
+        return $this->getData(EventInterface::ID);
     }
-
    
     /**
      * @param string $name
@@ -43,7 +41,7 @@ class Event extends AbstractModel implements Data\EventInterface
     public function setName($name)
     {
         if($name != null)
-            return $this->setData(Data\EventInterface::NAME, $name);
+            return $this->setData(EventInterface::NAME, $name);
 
     }
 
@@ -52,7 +50,7 @@ class Event extends AbstractModel implements Data\EventInterface
      */
     public function getName()
     {
-        return $this->getData(Data\EventInterface::NAME);
+        return $this->getData(EventInterface::NAME);
 
     }
 
@@ -63,7 +61,7 @@ class Event extends AbstractModel implements Data\EventInterface
     public function setBasePrice($basePrice)
     {
         if($basePrice != null && $basePrice > 0)
-            return $this->setData(Data\EventInterface::BASE_PRICE, $basePrice);
+            return $this->setData(EventInterface::BASE_PRICE, $basePrice);
 
     }
 
@@ -72,7 +70,7 @@ class Event extends AbstractModel implements Data\EventInterface
      */
     public function getBasePrice()
     {
-        return $this->getData(Data\EventInterface::BASE_PRICE);
+        return $this->getData(EventInterface::BASE_PRICE);
     }
 
     /**
@@ -82,7 +80,7 @@ class Event extends AbstractModel implements Data\EventInterface
     public function setRating($rating)
     {
         if($rating != null)
-            return $this->setData(Data\EventInterface::RATING, $rating);
+            return $this->setData(EventInterface::RATING, $rating);
 
     }
 
@@ -91,6 +89,6 @@ class Event extends AbstractModel implements Data\EventInterface
      */
     public function getRating()
     {
-        return $this->getData(Data\EventInterface::RATING);
+        return $this->getData(EventInterface::RATING);
     }
 }

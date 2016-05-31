@@ -8,6 +8,7 @@
         <title>Page Index</title>
     </head>
     <body>
-        <?php require_once APPLICATION_PATH . '/views/' . $contentView ; ?>
+    <?php /** @var TYPE_NAME $contentView */
+        require_once APPLICATION_PATH . '/views/' . $contentView ; ?>
     </body>
 </html>

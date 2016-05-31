@@ -9,12 +9,13 @@
 namespace App\Model;
 
 use App\Api\Data;
+use App\Api\Data\UserInterface;
 
 /**
  * Class User
  * @package App\Model
  */
-class User extends AbstractModel implements Data\UserInterface
+class User extends AbstractModel implements UserInterface
 {
     /**
      * @inheritdoc
@@ -23,7 +24,7 @@ class User extends AbstractModel implements Data\UserInterface
      */
     public function setId($id)
     {
-        return $this->setData(Data\UserInterface::ID, $id);
+        return $this->setData(UserInterface::ID, $id);
     }
 
     /**
@@ -32,7 +33,7 @@ class User extends AbstractModel implements Data\UserInterface
      */
     public function getId()
     {
-        return $this->getData(Data\UserInterface::ID);
+        return $this->getData(UserInterface::ID);
     }
 
     /**
@@ -42,7 +43,7 @@ class User extends AbstractModel implements Data\UserInterface
      */
     public function setFirstName($firstName)
     {
-        return $this->setData(Data\UserInterface::FIRST_NAME, $firstName);
+        return $this->setData(UserInterface::FIRST_NAME, $firstName);
     }
 
     /**
@@ -51,7 +52,7 @@ class User extends AbstractModel implements Data\UserInterface
      */
     public function getFirstName()
     {
-        return $this->getData(Data\UserInterface::FIRST_NAME);
+        return $this->getData(UserInterface::FIRST_NAME);
     }
 
     /**
@@ -59,7 +60,7 @@ class User extends AbstractModel implements Data\UserInterface
      */
     public function setLastName($lastName)
     {
-        return $this->setData(Data\UserInterface::LAST_NAME, $lastName);
+        return $this->setData(UserInterface::LAST_NAME, $lastName);
     }
 
     /**
@@ -67,7 +68,7 @@ class User extends AbstractModel implements Data\UserInterface
      */
     public function getLastName()
     {
-        return $this->getData(Data\UserInterface::LAST_NAME);
+        return $this->getData(UserInterface::LAST_NAME);
     }
 
     /**
@@ -75,7 +76,7 @@ class User extends AbstractModel implements Data\UserInterface
      */
     public function setEmail($email)
     {
-        return $this->setData(Data\UserInterface::EMAIL, $email);
+        return $this->setData(UserInterface::EMAIL, $email);
     }
 
     /**
@@ -83,7 +84,7 @@ class User extends AbstractModel implements Data\UserInterface
      */
     public function getEmail()
     {
-        return $this->getData(Data\UserInterface::EMAIL);
+        return $this->getData(UserInterface::EMAIL);
     }
 
     /**
@@ -91,7 +92,7 @@ class User extends AbstractModel implements Data\UserInterface
      */
     public function setBirthday($birthday)
     {
-        return $this->setData(Data\UserInterface::BIRTHDAY, $birthday);
+        return $this->setData(UserInterface::BIRTHDAY, $birthday);
     }
 
     /**
@@ -99,6 +100,6 @@ class User extends AbstractModel implements Data\UserInterface
      */
     public function getBirthday()
     {
-        return $this->getData(Data\UserInterface::BIRTHDAY);
+        return $this->getData(UserInterface::BIRTHDAY);
     }
 }

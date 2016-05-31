@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Core\FrontController;
+use App\Model\Event;
 use App\Model\EventRepository;
 
 /**
@@ -37,7 +38,7 @@ class Events extends FrontController
      */
     function addAction()
     {
-        $event = new \App\Model\Event();
+        $event = new Event();
         if (!empty($_POST)) {
             $event->setData($_POST);
             try {
